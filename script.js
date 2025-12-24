@@ -27,6 +27,11 @@ init();
 
 function init() {
   drawTimetable(insertCourses);
+
+  const addCourseBtn = document.getElementById("addBtn");
+  addCourseBtn.addEventListener("click", () => {
+    location.href = "./courseForm.html";
+  });
 }
 
 function drawTimetable(callback) {
@@ -40,6 +45,9 @@ function drawTimetable(callback) {
 
   const timetableWidth = (timetableDays + 1) * 100;
   timetable.style.width = timetableWidth.toString() + "px";
+
+  const mainSectionDiv = document.getElementById("mainSectionDiv");
+  mainSectionDiv.style.width = (timetableWidth + 100).toString() + "px";
 
   for (let i = timetableStartHour - 1; i < timetableEndHour; i++) {
     for (let j = 0; j < 60; j += timetableMinuteInterval) {

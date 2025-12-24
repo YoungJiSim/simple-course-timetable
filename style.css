@@ -2,8 +2,28 @@
   font-family: "Schoolbell", "Gamja Flower", "Playpen Sans", cursive, sans-serif;
 }
 
+button {
+  font-family: "Playpen Sans", cursive, sans-serif;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+#mainSectionDiv {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #timetableHeader {
   text-align: center;
+}
+
+#addBtn {
+  margin-left: 80%;
+  margin-bottom: 20px;
 }
 
 table {
