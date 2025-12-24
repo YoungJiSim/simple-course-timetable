@@ -28,7 +28,7 @@ init();
 function init() {
   drawTimetable(insertCourses);
 
-  const addCourseBtn = document.getElementById("addBtn");
+  const addCourseBtn = document.getElementById("addCourseBtn");
   addCourseBtn.addEventListener("click", () => {
     location.href = "./courseForm.html";
   });

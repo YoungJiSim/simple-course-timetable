@@ -2,13 +2,17 @@
   font-family: "Schoolbell", "Gamja Flower", "Playpen Sans", cursive, sans-serif;
 }
 
-button {
+button,
+input[type="reset"],
+input[type="submit"] {
   font-family: "Playpen Sans", cursive, sans-serif;
   background-color: white;
   border-radius: 5px;
   padding: 2px 10px;
 }
-button:hover {
+button:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
   cursor: pointer;
 }
 
@@ -21,7 +25,7 @@ button:hover {
   text-align: center;
 }
 
-#addBtn {
+#addCourseBtn {
   margin-left: 80%;
   margin-bottom: 20px;
 }
