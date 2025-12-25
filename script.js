@@ -163,22 +163,3 @@ function removeTd(tdId, tdCount, timetableMinuteInterval) {
     if (targetTd) targetTd.remove();
   }
 }
-
-function roughjsTest() {
-  const mainSectionDiv = document.getElementById("mainSectionDiv");
-  const mainRect = mainSectionDiv.getBoundingClientRect();
-  // 왼쪽 위 꼭지점
-  const x = mainRect.x;
-  const y = mainRect.y;
-  // 각각 너비, 높이
-  const width = mainRect.width;
-  const height = mainRect.height;
-
-  console.log(x, y, width, height);
-
-  // 따라서
-  // 왼쪽 위 꼭짓점 좌표: (x, y)
-  // 오른쪽 위 꼭짓점 좌표: (x + width, y)
-  // 왼쪽 아래 꼭짓점 좌표: (x, y + height)
-  // 오른쪽 아래 꼭짓점 좌표: (x + width, y + height)
-}
