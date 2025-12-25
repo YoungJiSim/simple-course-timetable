@@ -44,3 +44,10 @@ td {
   border-collapse: collapse;
   padding: 5px;
 }
+
+.scheduleSets {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 10px 0px;
+}
