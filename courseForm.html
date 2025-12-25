@@ -21,24 +21,34 @@
     <div id="mainSectionDiv">
       <h1 id="timetableHeader">Course Form</h1>
 
-      <form action="">
-        <label for="code">Course Code: </label>
-        <input type="text" id="code" name="code" />
-        <label for="name">Course Name: </label>
-        <input type="text" id="name" name="name" />
-        <label for="instructor">Instructor Name: </label>
-        <input type="text" id="instructor" name="instructor" />
-        <label for="credit">Credit: </label>
-        <input type="number" id="credit" name="credit" />
-
+      <form id="courseForm" action="">
+        <div class="inputGroupDivs">
+          <div class="inputDivs">
+            <label for="code">Course Code: </label>
+            <input type="text" id="code" name="code" />
+          </div>
+          <div class="inputDivs">
+            <label for="name">Course Name: </label>
+            <input type="text" id="name" name="name" />
+          </div>
+        </div>
+        <div class="inputGroupDivs">
+          <div class="inputDivs">
+            <label for="instructor">Instructor Name: </label>
+            <input type="text" id="instructor" name="instructor" />
+          </div>
+          <div class="inputDivs">
+            <label for="credit">Credit: </label>
+            <input type="number" id="credit" name="credit" />
+          </div>
+        </div>
         <button type="button" id="addScheduleBtn">Add Schedule</button>
-
         <fieldset id="scheduleFieldset">
-          <legend>Schedule</legend>
+          <legend><strong>Schedule</strong></legend>
         </fieldset>
 
         <input type="reset" />
-        <input type="submit" />
+        <input type="submit" id="submitBtn" />
       </form>
     </div>
 

@@ -9,25 +9,13 @@ input[type="submit"] {
   background-color: white;
   border-radius: 5px;
   padding: 2px 10px;
+  margin: 10px 5px;
 }
+
 button:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   cursor: pointer;
-}
-
-#mainSectionDiv {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#timetableHeader {
-  text-align: center;
-}
-
-#addCourseBtn {
-  margin-left: 80%;
-  margin-bottom: 20px;
 }
 
 table {
@@ -45,9 +33,56 @@ td {
   padding: 5px;
 }
 
+legend {
+  padding: 0px 8px;
+}
+
+#mainSectionDiv {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#timetableHeader {
+  text-align: center;
+}
+
+#addCourseBtn {
+  margin-left: 80%;
+  margin-bottom: 20px;
+}
+
+#courseForm {
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 5px;
+}
+
 .scheduleSets {
   border: 1px solid black;
   border-radius: 5px;
-  padding: 8px;
+  padding: 10px;
   margin: 10px 0px;
+}
+
+.inputGroupDivs {
+  margin: 10px 0px;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  column-gap: 4%;
+}
+
+.inputDivs {
+  display: grid;
+  grid-template-columns: auto 65%;
+}
+
+.deleteScheduleBtns {
+  margin: 5px 0px 5px 78%;
+}
+
+#submitBtn {
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 75%;
 }
