@@ -1,4 +1,4 @@
-const courses = [
+let courses = [
   {
     code: "COMP 2121",
     name: "Discrete Mathematics",
@@ -33,9 +33,9 @@ function init() {
     location.href = "./courseForm.html";
   });
 
-  const courseItem = localStorage.getItem("course");
-  if (courseItem) {
-    courses.push(JSON.parse(courseItem));
+  const courseItems = localStorage.getItem("courses");
+  if (courseItems) {
+    courses = courses.concat(JSON.parse(courseItems));
     insertCourses(timetableMinuteInterval);
   }
 }

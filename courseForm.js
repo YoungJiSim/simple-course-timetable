@@ -97,7 +97,14 @@ function addCourse() {
       time: formattedTime,
     };
   }
-  localStorage.setItem("course", JSON.stringify(course));
+
+  const courses = JSON.parse(localStorage.getItem("courses"));
+  if (!courses) {
+    localStorage.setItem("courses", JSON.stringify([course]));
+  } else {
+    courses.push(course);
+    localStorage.setItem("courses", JSON.stringify(courses));
+  }
   location.href = "./index.html";
 }
 
