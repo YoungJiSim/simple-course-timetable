@@ -32,6 +32,9 @@ td {
   border-collapse: collapse;
   padding: 5px;
 }
+fieldset {
+  margin-top: 20px;
+}
 
 legend {
   padding: 0px 8px;
@@ -75,6 +78,10 @@ legend {
 .inputDivs {
   display: grid;
   grid-template-columns: auto 65%;
+}
+
+#addScheduleBtn {
+  margin: 0px 0px 5px 80%;
 }
 
 .deleteScheduleBtns {

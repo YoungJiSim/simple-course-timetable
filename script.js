@@ -1,6 +1,6 @@
 const courses = [
   {
-    code: "COMP2121",
+    code: "COMP 2121",
     name: "Discrete Mathematics",
     instructor: "Simin Jolfaee",
     credit: 4,
@@ -8,14 +8,14 @@ const courses = [
       {
         CRN: 86154,
         classType: "Lecture",
-        day: "MON",
+        day: "TUE",
         time: "0830-1020",
         classroom: "DTC 581",
       },
       {
         CRN: 72567,
         classType: "Lab",
-        day: "MON",
+        day: "TUE",
         time: "1330-1520",
         classroom: "DTC 686",
       },
@@ -26,12 +26,18 @@ const courses = [
 init();
 
 function init() {
-  drawTimetable(insertCourses);
+  timetableMinuteInterval = drawTimetable(insertCourses);
 
   const addCourseBtn = document.getElementById("addCourseBtn");
   addCourseBtn.addEventListener("click", () => {
     location.href = "./courseForm.html";
   });
+
+  const courseItem = localStorage.getItem("course");
+  if (courseItem) {
+    courses.push(JSON.parse(courseItem));
+    insertCourses(timetableMinuteInterval);
+  }
 }
 
 function drawTimetable(callback) {
@@ -83,6 +89,8 @@ function drawTimetable(callback) {
   if (callback) {
     callback(timetableMinuteInterval);
   }
+
+  return timetableMinuteInterval;
 }
 
 function insertCourses(timetableMinuteInterval) {
@@ -152,7 +160,7 @@ function removeTd(tdId, tdCount, timetableMinuteInterval) {
     const targetTd = document.getElementById(
       day + "-" + targetTimeHour + targetTimeMinute
     );
-    targetTd.remove();
+    if (targetTd) targetTd.remove();
   }
 }
 

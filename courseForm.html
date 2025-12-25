@@ -21,7 +21,7 @@
     <div id="mainSectionDiv">
       <h1 id="timetableHeader">Course Form</h1>
 
-      <form id="courseForm" action="">
+      <form id="courseForm" onsubmit="return false">
         <div class="inputGroupDivs">
           <div class="inputDivs">
             <label for="code">Course Code: </label>
@@ -42,9 +42,10 @@
             <input type="number" id="credit" name="credit" />
           </div>
         </div>
-        <button type="button" id="addScheduleBtn">Add Schedule</button>
+
         <fieldset id="scheduleFieldset">
           <legend><strong>Schedule</strong></legend>
+          <button type="button" id="addScheduleBtn">Add Schedule</button>
         </fieldset>
 
         <input type="reset" />
